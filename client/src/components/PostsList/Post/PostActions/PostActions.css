@@ -1,0 +1,31 @@
+.post-actions {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid #edeff1;
+}
+
+.action-button {
+  margin-right: 16px;
+}
+
+.post-actions .action-button.edit:hover {
+  color: #0056b3;
+}
+
+.post-actions .action-button.delete:hover {
+  color: #dc3545;
+}
+
+/* Responsive pentru mobile */
+@media (max-width: 768px) {
+  .post-actions {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .action-button {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+}

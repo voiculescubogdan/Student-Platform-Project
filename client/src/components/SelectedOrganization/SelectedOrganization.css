@@ -1,0 +1,201 @@
+.organization-header-section {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Partea de sus - Titlu și descriere centrate */
+.organization-title-section {
+  text-align: center;
+}
+
+.organization-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.organization-description {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Partea de jos - Membri și buton urmărire */
+.organization-actions-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 1.5rem;
+}
+
+.organization-stats {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.stat-icon {
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+.organization-actions {
+  flex-shrink: 0;
+}
+
+.follow-btn {
+  min-width: 130px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+}
+
+.follow-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.posts-header {
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8f9fa;
+}
+
+.posts-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.no-posts {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.no-posts-message h4 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.no-posts-message p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.organization-error,
+.organization-not-found {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.alert {
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.alert h4 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.alert p {
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Design responsive */
+@media (max-width: 768px) {
+  .selected-organization-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .organization-header-section {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  
+  .organization-title {
+    font-size: 1.5rem;
+  }
+  
+  .organization-description {
+    font-size: 1rem;
+  }
+  
+  .organization-actions-section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .organization-stats {
+    justify-content: center;
+  }
+  
+  .posts-header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .no-posts {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .organization-title {
+    font-size: 1.25rem;
+  }
+  
+  .organization-description {
+    font-size: 0.95rem;
+  }
+  
+  .follow-btn {
+    width: 100%;
+  }
+  
+  .organization-actions-section {
+    text-align: center;
+  }
+}

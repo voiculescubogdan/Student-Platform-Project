@@ -1,0 +1,138 @@
+.sidebar {
+  width: 270px;
+  background-color: #f8f9fa;
+  position: fixed; 
+  left: 0;
+  top: 56px;
+  overflow-y: auto; 
+  z-index: 1000;
+  min-width: 280px; 
+  height: calc(100vh - 56px);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sidebar-nav, .sidebar-nav li, .subnav-list, .subnav-list li {
+  list-style-type: none !important;
+}
+
+/* Stil pentru Reddit-like navigation */
+.reddit-nav-link {
+  transition: background-color 0.2s ease;
+  color: #1c1c1c !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  display: block;
+  border-radius: 8px;
+}
+
+.reddit-nav-link:hover, .reddit-nav-link:focus {
+  background-color: rgba(0,0,0,0.07) !important;
+  text-decoration: none !important;
+  color: #7178F1 !important;
+}
+
+.reddit-nav-link.active {
+  background-color: rgba(0,0,0,0.09) !important;
+  font-weight: 600;
+  color: #7178F1 !important;
+}
+
+/* Stil pentru subnavigare */
+.reddit-subnav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem 0;
+  color: #1c1c1c;
+  text-decoration: none !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.reddit-subnav-link:hover {
+  background-color: rgba(0,0,0,0.05);
+  text-decoration: none !important;
+  color: #7178F1 !important;
+
+}
+
+.subnav-list {
+  padding-left: 1rem;
+}
+
+.no-underline, .no-underline:hover, .no-underline:focus {
+  text-decoration: none !important;
+}
+
+/* Ajustări pentru iconițe și text */
+.sidebar svg {
+  margin-right: 0.5rem;
+}
+
+.text-inherit {
+  color: inherit;
+}
+
+/* Background colors, similar to Reddit */
+.bg-neutral-background {
+  background-color: #f8f9fa;
+}
+
+.bg-neutral-background-hover:hover {
+  background-color: rgba(0,0,0,0.07);
+}
+
+.text-secondary-onBackground {
+  color: #1c1c1c;
+}
+
+/* Border line styling */
+.sidebar .border-t {
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Ajustat pentru iconițe mai mari */
+.sidebar .text-xl {
+  font-size: 1.25rem;
+}
+
+.sidebar-link-content {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+
+.sidebar-icon {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%);
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    width: 80%;
+    max-width: 280px;
+  }
+  
+  /* Elimină orice padding excesiv pe mobil */
+  .sidebar > div {
+    padding: 10px !important;
+  }
+  
+  /* Asigură că elementele din sidebar pot fi apăsate prin overlay */
+  .sidebar-overlay {
+    pointer-events: auto; /* Permite click-uri */
+  }
+  
+  .sidebar {
+    pointer-events: auto; /* Permite click-uri pe sidebar */
+  }
+}
+
+.sidebar > div {
+  padding-top: 10px !important; /* Resetează padding-ul care împinge conținutul în jos */
+}

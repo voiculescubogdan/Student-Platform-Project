@@ -1,0 +1,232 @@
+.settings-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.settings-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.settings-header {
+  background: #f8f9fa;
+  color: black;
+  padding: 30px;
+  text-align: center;
+}
+
+.settings-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.settings-header p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+}
+
+.settings-content {
+  padding: 30px;
+}
+
+.setting-item {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 30px;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.setting-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.setting-icon {
+  margin-right: 10px;
+  color: #DC3545;
+  font-size: 1.2rem;
+}
+
+.setting-input-group {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.setting-input {
+  flex: 1;
+  min-width: 250px;
+  padding: 12px 16px;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: white;
+  color: black;
+}
+
+.setting-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.setting-input.disabled {
+  background: #f8f9fa;
+  color: #6c757d;
+  cursor: not-allowed;
+  border-color: #dee2e6;
+}
+
+.password-inputs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 250px;
+}
+
+.setting-buttons {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-edit {
+  background: #0056B3;
+  color: white;
+}
+
+.btn-edit:hover:not(:disabled) {
+  background: #0056B3;
+  color: white !important;
+  /* transition: background-color 0.2s ease; */
+}
+
+.btn-save {
+  background: #28a745;
+  color: white;
+}
+
+.btn-save:hover:not(:disabled) {
+  background: #218838;
+  color: white !important;
+}
+
+.btn-cancel {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: #5a6268;
+  color: white !important;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+}
+
+.success-message {
+  color: #155724;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  padding: 8px 12px;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 10px;
+  }
+  
+  .settings-header {
+    padding: 20px;
+  }
+  
+  .settings-header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .settings-content {
+    padding: 20px;
+  }
+  
+  .setting-input-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .setting-input {
+    min-width: auto;
+  }
+  
+  .password-inputs {
+    min-width: auto;
+  }
+  
+  .setting-buttons {
+    align-self: stretch;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .setting-buttons {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}

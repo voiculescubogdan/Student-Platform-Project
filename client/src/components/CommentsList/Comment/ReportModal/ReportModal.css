@@ -1,0 +1,60 @@
+.report-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.report-modal-content {
+  background-color: white;
+  padding: 24px;
+  border-radius: 8px;
+  min-width: 300px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.report-modal-content h4 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+}
+
+.report-modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn-cancel, .btn-submit {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-cancel {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.btn-submit {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #dee2e6;
+}
+
+.btn-submit:hover {
+  background-color: #c82333;
+}

@@ -1,0 +1,25 @@
+.comment-actions {
+  display: flex;
+  align-items: center;
+}
+
+.comment-actions .action-button.edit:hover {
+  color: #0056b3;
+}
+
+.comment-actions .action-button.delete:hover {
+  color: #dc3545;
+}
+
+/* Responsive pentru mobile */
+@media (max-width: 768px) {
+  .comment-actions {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .comment-actions .action-button {
+    margin-right: 8px;
+    margin-bottom: 4px;
+  }
+}

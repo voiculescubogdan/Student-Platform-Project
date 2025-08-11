@@ -1,0 +1,213 @@
+/* Sort.css - Design minimalist și elegant - importă stilurile comune */
+
+/* Importă stilurile din Filter.css sau definește-le aici */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu.sort-dropdown-menu {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  z-index: 1000 !important;
+  transform: none !important;
+  margin-top: 0.5rem !important;
+  will-change: auto !important;
+}
+
+/* Butonul principal pentru sortare */
+.sort-main-btn {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  color: #475569;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: 140px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sort-main-btn:hover {
+  border-color: #cbd5e1;
+  background: #f8fafc;
+  color: #334155;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.sort-main-btn:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Icon pentru dropdown */
+.dropdown-toggle::after {
+  transition: transform 0.2s ease;
+  border: none;
+  content: '▼';
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.sort-main-btn[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu pentru sortare */
+.sort-dropdown-menu {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 0;
+  margin-top: 0.5rem;
+  min-width: 200px;
+  max-width: 250px;
+  animation: fadeInDown 0.2s ease;
+}
+
+/* Header al dropdown-ului */
+.sort-header {
+  padding: 1rem 1rem 0.5rem 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sort-title {
+  margin: 0 0 0.75rem 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+/* Container pentru conținut */
+.sort-content {
+  padding: 0.75rem 1rem;
+}
+
+/* Lista opțiuni sortare */
+.sort-options-list {
+  margin: 0 -0.25rem;
+  padding: 0 0.25rem;
+}
+
+/* Item styling pentru opțiuni sortare */
+.sort-option-item {
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0;
+  transition: background-color 0.15s ease;
+  border-radius: 4px;
+}
+
+.sort-option-item:hover {
+  background: #f8fafc;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+}
+
+/* Custom styling pentru radio buttons */
+.sort-radio {
+  margin-right: 0.5rem;
+  width: 16px;
+  height: 16px;
+  accent-color: #3b82f6;
+  transition: all 0.15s ease;
+}
+
+.sort-radio:hover {
+  transform: scale(1.05);
+}
+
+/* Label styling */
+.sort-label {
+  color: #475569;
+  font-weight: 400;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  display: flex;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.sort-label:hover {
+  color: #334155;
+}
+
+/* Butonul de aplicare sortare */
+.sort-apply-section {
+  padding: 0.75rem 1rem 1rem 1rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.sort-apply-btn {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  width: 100%;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sort-apply-btn:hover {
+  background: #2563eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+.sort-apply-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.sort-apply-btn:disabled {
+  background: #94a3b8;
+  box-shadow: none;
+  transform: none;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sort-dropdown-menu {
+    min-width: 180px;
+    max-width: 90vw;
+  }
+  
+  .sort-main-btn {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.85rem;
+    min-width: 120px;
+  }
+  
+  .sort-header {
+    padding: 0.85rem 0.85rem 0.5rem 0.85rem;
+  }
+  
+  .sort-content, .sort-apply-section {
+    padding: 0.65rem 0.85rem;
+  }
+}
+
+/* Animație subtilă pentru dropdown */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

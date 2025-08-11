@@ -1,0 +1,14 @@
+{
+  "watch": ["server.mjs", "routes/", "models/", "middleware/"],
+  "ignore": [
+    "node_modules/",
+    "*.log",
+    "*.txt",
+    ".git/",
+    "../client/",
+    "uploads/",
+    "temp/"
+  ],
+  "ext": "mjs,js,json",
+  "delay": 500
+}

@@ -1,0 +1,115 @@
+.moderation-actions {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.moderation-header {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.moderation-header h3 {
+  color: #495057;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.moderation-header p {
+  color: #6c757d;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.moderation-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moderation-error p {
+  color: #721c24;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.moderation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.moderation-btn {
+  min-width: 150px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.moderation-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.moderation-confirmation {
+  text-align: center;
+}
+
+.confirmation-message {
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.confirmation-message p {
+  color: #495057;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.confirmation-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.confirmation-buttons .btn {
+  min-width: 120px;
+  padding: 0.75rem 1.25rem;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive design */
+@media (max-width: 576px) {
+  .moderation-buttons,
+  .confirmation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .moderation-btn,
+  .confirmation-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

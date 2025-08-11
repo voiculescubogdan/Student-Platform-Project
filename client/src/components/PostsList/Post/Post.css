@@ -1,0 +1,55 @@
+/* Stiluri de bază pentru postare */
+.reddit-post {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  overflow: hidden;
+  padding: 16px;
+  transition: box-shadow 0.3s ease;
+}
+
+.reddit-post:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.post-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 12px 0;
+  color: #1c1c1c;
+}
+
+/* Stil pentru responsive */
+@media (max-width: 768px) {
+  .reddit-post {
+    padding: 12px;
+  }
+  
+  .post-title {
+    font-size: 1.1rem;
+  }
+}
+
+.post-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-content-clickable {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Stilizare pentru elementele interactive */
+.post-actions button,
+.read-more-button,
+.slideshow-controls button {
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* Asigură că butoanele sunt deasupra link-ului */
+}

@@ -1,0 +1,42 @@
+.post-content {
+  margin: 12px 0;
+}
+
+.post-description {
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+  max-height: 300px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  font-weight: normal !important;
+  font-family: inherit;
+}
+
+.post-description.expanded {
+  max-height: 10000px; /* Valoare mare pentru a permite expandarea completă */
+}
+
+.read-more-button {
+  background: none;
+  border: none;
+  color: #0079d3;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.read-more-button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post-description {
+    font-size: 0.85rem;
+  }
+}

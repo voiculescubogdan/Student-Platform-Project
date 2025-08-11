@@ -1,0 +1,77 @@
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+  transition: all 0.2s ease;
+}
+
+.action-button:hover {
+  color: black;
+}
+
+.action-button svg {
+  margin-right: 6px;
+  transition: transform 0.2s ease, fill 0.2s ease;
+}
+
+.action-button.active {
+  color: #0079d3;
+  font-weight: 600;
+}
+
+.action-button.active svg {
+  fill: #0079d3;
+  transform: scale(1.1);
+}
+
+.action-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.action-icon {
+  font-size: 14px;
+}
+
+.action-button.report {
+  margin-left: auto;
+}
+
+.action-count {
+  font-size: 12px;
+  color: inherit;
+}
+
+/* Responsive pentru mobile */
+@media (max-width: 768px) {
+  .action-button {
+    padding: 4px 8px;
+    font-size: 11px;
+    margin-right: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  
+  .action-icon {
+    font-size: 12px;
+  }
+  
+  .action-count {
+    font-size: 11px;
+  }
+  
+  .action-text {
+    font-size: 11px;
+  }
+
+  .action-button.report {
+    margin-left: 0;
+  }
+}

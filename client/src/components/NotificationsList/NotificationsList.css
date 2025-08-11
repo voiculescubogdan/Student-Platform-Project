@@ -1,0 +1,143 @@
+.notifications-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #f8f9fa;
+}
+
+.notifications-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.notification-tab-btn {
+  position: relative;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notification-tab-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.notification-tab-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #ff6f00;
+  color: white;
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 6px;
+}
+
+.notifications-actions {
+  display: flex;
+  align-items: center;
+}
+
+.mark-all-read-btn {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mark-all-read-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.mark-all-read-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.notifications-list {
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.notifications-error {
+  padding: 24px;
+  text-align: center;
+  color: #dc3545;
+}
+
+.retry-btn {
+  background-color: transparent;
+  border: 1px solid #dc3545;
+  border-radius: 6px;
+  color: #dc3545;
+  padding: 6px 12px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-btn:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.no-notifications {
+  padding: 24px;
+  text-align: center;
+  color: #666;
+}
+
+/* Adăugare responsive design */
+@media (max-width: 576px) {
+  .notifications-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  
+  .notifications-tabs {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+  
+  .notifications-actions {
+    width: 100%;
+  }
+  
+  .mark-all-read-btn {
+    width: 100%;
+  }
+}

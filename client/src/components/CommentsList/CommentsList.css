@@ -1,0 +1,216 @@
+.comments-section {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #dee2e6;
+}
+
+.comments-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Stilizare container formular */
+.comment-form-container {
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Stilizare formular comentariu */
+.comment-form {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.comment-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Stilizare textarea */
+.comment-input {
+  width: 100%;
+  min-height: 48px;
+  max-height: 160px;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+  resize: vertical;
+  transition: border 0.3s, height 0.3s;
+}
+
+.expanded .comment-input {
+  min-height: 100px;
+  border: 1px solid #878a8c;
+}
+
+.comment-input:focus {
+  outline: none;
+  border-color: #1a1a1b;
+}
+
+.comment-input:disabled {
+  background-color: #f8f8f8;
+  color: #888;
+  cursor: not-allowed;
+}
+
+/* Container pentru butoane */
+.comment-actions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.button-spacer {
+  flex-grow: 1;
+}
+
+.comment-form-buttons {
+  padding: 0 8px 8px 8px;
+}
+
+/* Stilizare butoane */
+.btn-retry {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+.btn-retry:hover {
+  background-color: #0069d9;
+}
+
+.btn-comment {
+  background-color: #7d181e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-comment:hover {
+  background-color: #9a1f27;
+}
+
+.btn-comment:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.btn-cancel-comment {
+  background-color: transparent;
+  color: #7d181e;
+  border: 1px solid #7d181e;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-cancel-comment:hover {
+  background-color: #f8e9ea;
+  border: 1px solid #7d181e;
+}
+
+/* Informații despre răspuns la comentarii */
+.replying-to {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.replying-to .btn-cancel {
+  background: none;
+  color: #878a8c;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.replying-to .btn-cancel:hover {
+  color: #1a1a1b;
+}
+
+/* Mesaj pentru utilizatorii neautentificați */
+.auth-prompt {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #878a8c;
+  text-align: center;
+}
+
+/* Lista de comentarii */
+.comments-list {
+  margin-top: 20px;
+}
+
+.no-comments {
+  text-align: center;
+  color: #878a8c;
+  padding: 20px;
+  font-style: italic;
+}
+
+.comments-loading {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  color: #6c757d;
+}
+
+.comments-error {
+  background-color: #fde8e8;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #dc3545;
+  margin-top: 16px;
+}
+
+.comments-error .btn-retry {
+  background-color: #7d181e;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .comment-input-container {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .comment-input {
+    border-radius: 4px 0 0 4px;
+  }
+}

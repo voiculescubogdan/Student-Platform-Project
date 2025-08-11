@@ -1,0 +1,7 @@
+# Ignoră folderul database
+database/
+
+# Database backups
+*.backup
+*.sql
+*.dump

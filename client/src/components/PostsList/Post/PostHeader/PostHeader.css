@@ -1,0 +1,64 @@
+.post-header {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  margin-bottom: 8px;
+}
+
+.post-info {
+  flex: 1;
+  font-size: 0.75rem;
+  color: #7c7c7c;
+}
+
+.organization {
+  color: #0079d3;
+  font-weight: 700;
+}
+
+.organization.clickable,
+.username.clickable {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.username.clickable {
+  color: inherit; /* Ia culoarea de la elementul părinte (.author care este #7c7c7c) */
+}
+
+.organization.clickable:hover {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.username.clickable:hover {
+    color: #0056b3;
+  /* Nu mai adăugăm text-decoration: underline; */
+}
+
+.author {
+  color: #7c7c7c;
+}
+
+.date {
+  color: #7c7c7c;
+}
+
+.separator {
+  margin: 0 4px;
+}
+
+@media (max-width: 768px) {
+  .post-info {
+    font-size: 0.7rem;
+  }
+  
+  /* Asigură că username-ul are aceeași dimensiune ca celelalte texte pe mobil */
+  .username.clickable,
+  .organization.clickable,
+  .author,
+  .date {
+    font-size: inherit;
+  }
+}

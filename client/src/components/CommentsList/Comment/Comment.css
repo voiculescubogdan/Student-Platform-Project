@@ -1,0 +1,113 @@
+.comment-container {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
+.comment-thread-line {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  bottom: 10px;
+  width: 2px;
+  background-color: #e2e8f0;
+}
+
+.comment {
+  position: relative;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: white;
+  margin-left: 12px;
+}
+
+.comment-reply {
+  margin-left: 24px;
+  margin-top: 10px;
+}
+
+.comment-replies {
+  margin-top: 8px;
+}
+
+.nested-replies {
+  margin-left: 12px;
+}
+
+/* Stiluri pentru editarea comentariilor */
+.comment-edit {
+  margin: 8px 0;
+}
+
+.comment-edit-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: vertical;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+  color: black;
+}
+
+.comment-edit-textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.comment-edit-textarea:disabled {
+  background-color: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.comment-edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.comment-edit-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.comment-edit-actions .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comment-edit-actions .btn-save {
+  background-color: #28a745;
+  color: white;
+  border-color: #28a745;
+}
+
+.comment-edit-actions .btn-save:hover:not(:disabled) {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+.comment-edit-actions .btn-cancel {
+  background-color: #6c757d;
+  color: white;
+  border-color: #6c757d;
+}
+
+.comment-edit-actions .btn-cancel:hover:not(:disabled) {
+  background-color: #5a6268;
+  border-color: #545b62;
+}

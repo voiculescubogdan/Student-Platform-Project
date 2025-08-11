@@ -1,0 +1,13 @@
+.loading-spinner {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-spinner p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6c757d;
+}

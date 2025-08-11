@@ -1,0 +1,55 @@
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  padding-top: 56px;
+  position: relative;
+}
+
+.page-content {
+  flex: 1;
+  overflow-x: visible !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center;
+  padding-left: 280px; /* Lățimea sidebar-ului */
+  width: calc(100% - 280px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* Asigură că nu depășește lățimea ferestrei */
+}
+
+body .page-content.sidebar-collapsed {
+  padding-left: 0;
+  width: 100%;
+}
+
+/* Overlay pentru mobil */
+.sidebar-overlay {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 998; /* Sub sidebar dar peste conținut */
+  display: none;
+}
+
+.sidebar-overlay.show {
+  display: block;
+}
+
+/* Ajustări pentru mobil */
+@media (max-width: 767px) {
+  .page-content {
+    padding-left: 0;
+    width: 100%;
+  }
+}
